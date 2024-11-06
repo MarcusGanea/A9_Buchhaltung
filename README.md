@@ -19,9 +19,7 @@ Diese Anwendung ist die neunte Übung vom Labor ITL12...<br>
 <div>•	Welche Klassen werden benötigt?<div/>
 <div>•	Welche Methoden werden in der Klasse benötigt?<div/>
 <div>•	ERROR Handling: Unbedingt auf mögliche Eingabefehler reagieren!<div/>
-<div>o	https://www.jetbrains.com/help/idea/connecting-to-a-database.html#<div/>
-<div>•	Vorgang beim Einbinden von Daten aus der Datenbank dokumentieren<div/>
-<div>•	Sequenzielles Auslesen aller Datensätze aus einer Tabelle (Employee)<div/>
+
 
 
 
