@@ -1,6 +1,8 @@
 import javax.swing.*;
 import java.awt.event.*;
 import java.sql.SQLException;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 
 public class KategorieHinzufuegen extends JDialog {
     private JPanel contentPane;
@@ -29,6 +31,13 @@ public class KategorieHinzufuegen extends JDialog {
                 onOK();
             }
         });
+
+        // wenn man Enter drückt, wird onOK() ausgeführt
+        contentPane.registerKeyboardAction(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                onOK();
+            }
+        }, KeyStroke.getKeyStroke(KeyEvent.VK_ENTER, 0), JComponent.WHEN_ANCESTOR_OF_FOCUSED_COMPONENT);
 
         buttonCancel.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
