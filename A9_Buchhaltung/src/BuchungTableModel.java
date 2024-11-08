@@ -26,26 +26,33 @@ public class BuchungTableModel extends AbstractTableModel {
     public int getColumnCount() {
         return 6; // Anzahl der Spalten inklusive der versteckten ID-Spalte
     }
+    // Method to add a new category and update the maps
+    public void addCategory(int categoryId, String categoryName, int einAuszahlung) {
+        kategorieMap.put(categoryId, categoryName);
+        einAuszahlungMap.put(categoryId, einAuszahlung);
+        fireTableDataChanged(); // Notify the table model of the data change
+    }
 
     // Methode, die den Wert einer Zelle in der Tabelle zurückgibt
     @Override
     public Object getValueAt(int rowIndex, int columnIndex) {
-        Buchung buchung = buchungen.get(rowIndex); // Buchung an der gegebenen Zeile
+        Buchung buchung = buchungen.get(rowIndex);
         switch (columnIndex) {
             case 0:
-                return buchung.getId(); // Versteckte ID-Spalte
+                return buchung.getId();
             case 1:
-                return buchung.getDatum(); // Datum der Buchung
+                return buchung.getDatum();
             case 2:
-                return kategorieMap.get(buchung.getKategorieID()); // Kategorie der Buchung
+                return kategorieMap.getOrDefault(buchung.getKategorieID(), "Unknown Category");
             case 3:
-                return buchung.getInfo(); // Informationen zur Buchung
+                return buchung.getInfo();
             case 4:
-                return buchung.getBetrag(); // Betrag der Buchung
+                return buchung.getBetrag();
             case 5:
-                return einAuszahlungMap.get(buchung.getKategorieID()) == 1 ? "Einnahme" : "Ausgabe"; // Typ der Buchung
+                Integer einAuszahlung = einAuszahlungMap.get(buchung.getKategorieID());
+                return einAuszahlung != null && einAuszahlung == 1 ? "Einnahme" : "Ausgabe";
             default:
-                return null; // Standardfall
+                return null;
         }
     }
 
