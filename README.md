@@ -50,10 +50,12 @@ Technologien im Einsatz:
 
 
 ### Das Hauptfenster
-![image](https://github.com/user-attachments/assets/4fa3f3ae-2e9a-471c-b011-c93db605bf9f)
+![image](https://github.com/user-attachments/assets/c86e8a8e-afa1-4930-8d9e-e310924b6621)
+
 
 ### Eine Buchung eingetragen
-![image](https://github.com/user-attachments/assets/18d1db10-2ede-46ef-826e-21e5ecf43b30)
+![image](https://github.com/user-attachments/assets/7a144853-307a-4497-9305-b7e92b3accb5)
+
 
 ### Wenn man ohne das ausfüllen der Felder bestätigt
 ![image](https://github.com/user-attachments/assets/d4c3f2aa-27f6-46bb-8c11-81c30777bd41)
