@@ -37,6 +37,7 @@ git clone https://github.com/MarcusGanea/A9_Buchhaltung
 
 ## Verwendung
 Technologien im Einsatz:
+<br><br>
 [![Java][java.com]][java-url]
 
 
